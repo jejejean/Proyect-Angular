@@ -1,0 +1,31 @@
+<div class="bg-slate-700 flex flex-col justify-center items-center h-screen">
+  <form class="flex flex-col text-white gap-4" action="">
+    <app-inputs
+      [label]="'USERNAME'"
+      [id]="'user'"
+      [name]="'username'"
+      [type]="'text'"
+      [placeholder]="'Username'"
+    ></app-inputs>
+    <app-inputs
+      [label]="'PASWWORD'"
+      [id]="'pass'"
+      [name]="'password'"
+      [type]="'password'"
+      [placeholder]="'Password'"
+    ></app-inputs>
+    <app-buttons
+      [buttonText]="'Login'"
+      [buttonClass]="'border w-full bg-green-600 p-2'"
+    ></app-buttons>
+    <app-buttons
+      [buttonText]="'Login'"
+      [buttonClass]="
+        'border-2 text-lg font-semibold w-full bg-white text-blue-500 border-blue-500 p-2'
+      "
+    ></app-buttons>
+  </form>
+</div>
+
+<router-outlet></router-outlet>
+
