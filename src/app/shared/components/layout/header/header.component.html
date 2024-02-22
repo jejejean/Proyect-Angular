@@ -1,1 +1,63 @@
-<p>header works!</p>
+<!-- app.component.html -->
+<header class="grid justify-center grid-cols-12 bg-stone-50">
+  <div class="grid border justify-end col-span-3">
+    <img
+      src="../../../../../assets/images/logo.svg"
+      alt="logo"
+      class="w-40 h-20"
+    />
+  </div>
+  <nav class="border col-span-7">
+    <ul class="grid grid-cols-5 gap-4 items-center h-20">
+      <li
+        class="relative flex justify-center"
+        (mouseenter)="toggleDropdown('planificaViaje')"
+        (mouseleave)="toggleDropdown('planificaViaje')"
+      >
+      <button class=""> Planifica tu Viaje </button>
+      <ul
+          class="absolute top-full bg-gray-100 border p-4 w-52"
+          [class.hidden]="!dropdownStates.planificaViaje"
+        >
+          <li><a href="#">Destinos y vuelos</a></li>
+          <li><a href="#">Vuelos Baratos</a></li>
+          <li><a href="#">Estado de Vuelos</a></li>
+        </ul>
+      </li>
+      <li
+        class="relative flex justify-center"
+        (mouseenter)="toggleDropdown('destinosVuelos')"
+        (mouseleave)="toggleDropdown('destinosVuelos')"
+      >
+        <button class="" href="#">
+          Destinos y Vuelos 
+        </button>
+        <ul
+          class="absolute top-full bg-gray-100 border p-4 w-52"
+          [class.hidden]="!dropdownStates.destinosVuelos"
+        >
+          <li><a href="#">Vuelos desde Lima</a></li>
+          <li><a href="#">Vuelos a Cusco</a></li>
+          <!-- Agrega más elementos de lista según sea necesario -->
+        </ul>
+      </li>
+      <li
+        class="relative flex justify-center"
+        (mouseenter)="toggleDropdown('servicios')"
+        (mouseleave)="toggleDropdown('servicios')"
+      >
+        <button class="" href="#">Servicios  </button>
+        <ul
+          class="absolute top-full bg-gray-100 border p-4 w-52"
+          [class.hidden]="!dropdownStates.servicios"
+        >
+          <li><a href="#">Autos</a></li>
+          <li><a href="#">Tours</a></li>
+          <li><a href="#">Reserva en Grupos</a></li>
+        </ul>
+      </li>
+      <li class="flex justify-center"><a href="#">Administra tu Vuelo</a></li>
+      <li class="flex justify-center"><a href="#">Check-In</a></li>
+    </ul>
+  </nav>
+</header>
